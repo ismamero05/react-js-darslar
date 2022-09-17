@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Footer from './footer.jsx'
+import Navbar from './navbar.jsx'
 import './index.css'
-
+import Proper from './properties.jsx'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Footer />
+    <Navbar />
+    <Proper />
   </React.StrictMode>
 );
 
