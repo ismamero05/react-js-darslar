@@ -1,27 +1,18 @@
 import React, { Component } from 'react';
-import logo from './assets/logo.svg'
+import {Container, Login, Inp, Button} from './style.js'
 
-class Navbar extends Component{
-    // constructor(props){
-    //     super(props);
-    // }
 
-    
-    render(){
-    
-                
-        return (
-            <div className='navbar'>
-                <img src={logo} alt="" className="logo" />
-                <ul className="options">
-                    <li>home</li>
-                    <li>properties</li>
-                    <li>contacts</li>
-                </ul>
-                <button className="login">login</button>
-            </div>
-        )
-    }
+class Navbar extends Component {
+    render() {
+
+      return (
+        <Container>
+          <Login>Login</Login>
+          <Inp type='text'></Inp>
+          <Inp type='password'></Inp>
+          <Button>Login</Button>
+        </Container>
+      )
+  }
 }
-
 export default Navbar
