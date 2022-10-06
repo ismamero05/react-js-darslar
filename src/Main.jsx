@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import LeftBar from './LeftBar/LeftBar.jsx';
-import MainBody from './MainBody/MainBody.jsx';
-import Top from './Navbar/TopComp.jsx';
-import './index.css'
+import Categ from './category/Category.jsx';
+import Choose from './Choose/WhyChoose.jsx';
+import FirSwiper from './FirSwiper/FirSwiper.jsx';
+import './index.css';
+import Navbar from './Navbar/NavbarFIle.jsx';
+import Section01 from './ThreeSwiper/ThreeSwiper.jsx';
 
 class Main extends Component {
 
     render(){
 
         return(
-            <>
-                <Top />
-                <div className='disfl'>
-                    <LeftBar />
-                    <MainBody />
-
-                </div>
-            </>
+            <div>
+                <Navbar />
+                <FirSwiper />
+                <Section01 />
+                <Choose />
+                <Categ />
+            </div>
         )
     }
 }

@@ -1,92 +1,73 @@
 import styled, {css} from 'styled-components';
 
+
 const Df = css`
     display: flex;
     align-items: center;
     justify-content: center;
 `
 
-const Container = styled.div`
-    background: #212121;
-    width: 100%;
-    height: 56px;
+const NavbarPart = styled.div`
     ${Df};
-    justify-content: space-between;
-    padding: 0 32px 0 37px;
-    /* position: fixed; */
-    
+    height: 64px;
+    justify-content: space-around;
+    background: #0D263B;
 `
-const NavLeft = styled.div`
+
+const Option = styled.div`
     ${Df};
-    gap: 27px;
+    gap: 64px;
 
-    > .menu-icon{
-        transition: tranform .3s;
-        cursor: pointer;
 
-        :active {
-            transform: scale(0.87);
-        }
+    > p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: capitalize;
+
+        color: #FFFFFF;
     }
+
 `
 
-const NavMid = styled.div`
+const AboutPart = styled.div`
     ${Df};
-    position: relative;
+    height: 64px;
+    gap: 20px;
 
-    > #search-inp{
-        width: 574px;
-        height: 32px;
-        background: #000000;
-        outline: none;
-        border: none;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 2px 0px 0px 2px;
+
+    > div:nth-child(1){
+        padding: 12px 139px 12px 16px;
+    }
+
+    > div:nth-child(2){
+        padding: 12px 29px;
+    }
+
+    > div:nth-child(3){
+        padding: 12px 34px;
+    }
+
+    > div:nth-child(4){
+        padding: 12px 16px;
+    }
+
+    > div:nth-child(5){
+        padding: 14px 54px;
+        background: #0061DF;
         color: white;
-        padding-left: 10px;
+        border: 1px solid #0061DF;
     }
 
-    > .search-btn {
+
+    > div {
         ${Df};
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 65px;
-        height: 32px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 0px 2px 2px 0px;
-        border: none;
-        outline: none;
-        transition: transfrom .3s;
-
-
-        :active{
-            transform: scale(.87);
-        }
+        border: 1px solid #E6E9EC;
+        border-radius: 2px;
+        padding: 12px;
+        gap: 8px;
     }
 `
 
-const NavRight = styled.div`
-    ${Df};
-    width: 200px;
-    justify-content: space-between;
-
-    > .bell-icon{
-        transition: all .3s;
-
-        :active{
-            transform: rotate(-20deg);
-        }
-    }
-
-    > .btn-act {
-        transition: transfrom .3s;
-
-        :active{
-            transform: scale(.87);
-        }
-    }
-`
-
-
-export {Container, NavLeft, NavMid, NavRight}
+export {NavbarPart, Option, AboutPart}
