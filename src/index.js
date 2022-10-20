@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import FlowersContext from './context/Flowers';
+import { Login } from './index.jsx';
 import './index'
-import { Root } from './root';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FlowersContext>
-      <Root />
-    </FlowersContext>
+    <Login />
   </React.StrictMode>
 );
