@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components'
+import styled, {css} from 'styled-components';
 
 const Df = css`
     display: flex;
@@ -6,48 +6,103 @@ const Df = css`
     justify-content: center;
 `
 
-
-const Container = styled.h1`
-    width: 500px;
-    background-color: red;
+const Container = styled.div`
+    /* width: 300px; */
+    /* height: 500px; */
+    background: #EC8171 ;
+    ${Df};
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px 5px;
-    ${Df};
     flex-direction: column;
-`
-
-const Login = styled.h3`
-    font-family: sans-serif;
-`
-
-const Inp = styled.input`
-    width: 60%;
-    height: 25px;
-    margin-top: 10px;
-    padding-left: 5px;
-    outline: none;
-    border: none;
-`
-
-const Button = styled.div`
-    width: 100px;
-    height: 30px;
-    margin-top: 20px;
+    padding: 25px 10px;
     border-radius: 5px;
-    font-size: 23px;
-    font-family: sans-serif;
-    ${Df};
-    color: cyan;
-    background: yellow;
-    transition: transform .3s;
-    cursor: pointer;
+`
 
-    :active{
-        transform: scale(0.87)
+const Adding = styled.div`
+    ${Df};
+    position: relative;
+
+    > input {
+        border: none;
+        background-color: #FDCEC6;
+        outline: none;
+        width: 300px;
+        height: 45px;
+        border-radius: 10px;
+    }
+
+    > button {
+        position: absolute;
+        /* top: px; */
+        right: 10px;
+        border: none;
+        outline: none;
+        color: #EC8171;
+        background: transparent;
+        font-size: 40px;
     }
 `
 
-export {Container, Login, Inp, Button}
+const Mains = styled.div`
+    ${Df};
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-around;
+
+    > input[type='checkbox'] {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: white;
+        cursor: pointer;
+        padding: 2px;
+        outline: none;
+    }
+
+    > input[type='checkbox']::after {
+        content: '\f00c';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    > input[type='checkbox']:hover {
+        background-color: aquamarine;
+    }
+
+    > input[type='checkbox']:checked::after {
+        display: block  ;
+    }
+`
+
+const Counter = styled.div`
+    ${Df};
+    background: white;
+    padding: 10px;
+    border-radius: 50px;
+    gap: 10px;
+
+    > img {
+        width: 15px;
+    }
+`
+
+const TotalCount = styled.h3`
+    margin-top: 25px;
+    margin-right: -180px;
+`
+
+const Items = styled.p`
+    font-size: 25px;
+    text-decoration: ${({check}) => check && 'line-through'};
+`
+
+export {Container, Adding, Mains, Counter, TotalCount, Items}
